@@ -12,7 +12,7 @@
       </p>
     </section>
 
-    <div class="techs" layout-align="center">
+    <md-content class="techs" layout-align="center center" layout-xs="column" layout-gt-xs="row">
       <md-card ng-repeat="midia in main.midiaTypes">
         <md-card-content>
           <img class="pull-right" height="140px" ng-src="assets/images/{{ midia.logo }}" alt="{{ midia.title }}">
@@ -24,7 +24,7 @@
           <md-button ng-href="{{ midia.url }}" ng-click="main.showToastr(midia.message)">Ir</md-button>
         </div>
       </md-card>
-    </div>
+    </md-content>
   </md-content>
 
 </div>
