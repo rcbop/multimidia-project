@@ -20,6 +20,13 @@
               'description': 'Livro da discplina online no formato pdf',
               'logo': 'ms-book.png',
               'message': 'Abrindo pdf no Google drive'
+            },
+            {
+              'title': 'Repositório GitHub',
+              'url': 'https://github.com/rcbop/multimidia-project',
+              'description': 'Repositório github com o código',
+              'logo': 'github.gif',
+              'message': 'Redirecionando'
             }
       ];
 

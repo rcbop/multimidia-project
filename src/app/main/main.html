@@ -12,19 +12,18 @@
       </p>
     </section>
 
-    <md-content class="techs" layout-align="center center" layout-xs="column" layout-gt-xs="row">
-      <md-card ng-repeat="media in main.mediaTypes">
+    <div class="techs" layout-align="center center" layout-xs="column" layout-gt-xs="row">
+      <md-card ng-repeat="media in main.mediaTypes" flex>
         <md-card-content>
-          <img class="pull-right" height="140px" ng-src="assets/images/{{ media.logo }}" alt="{{ media.title }}">
+          <img class="pull-right" height="130px" ng-src="assets/images/{{ media.logo }}" alt="{{ media.title }}"/>
           <h3 class="md-title">{{ media.title }}</h3>
           <p>{{ media.description }}</p>
-        </md-card-content>
         <br>
         <div class="md-action-buttons">
-          <md-button ng-href="{{ media.url }}" ng-click="main.showToastr(media.message)">Ir</md-button>
+          <md-button ng-href="{{ media.url }}" ng-click="main.showToastr(media.message)">Abrir</md-button>
         </div>
+        </md-card-content>
       </md-card>
-    </md-content>
+    </div>
   </md-content>
-
 </div>
