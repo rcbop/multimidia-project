@@ -1,0 +1,52 @@
+
+<div layout="column" layout-fill>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button href="/">
+        <md-icon aria-label="Menu" class="material-icons">arrow_back</md-icon>
+      </md-button>
+      <h2>
+        <span>Video Aula :: AWS Elastic Computing Cloud</span>
+      </h2>
+      <span flex></span>
+    </div>
+  </md-toolbar>
+  <div class="my-container">
+    <md-card layout-fill layout-align="center center" layout-padding>
+      <!-- Video -->
+      <vjs-video-container class="animate-content" ng-hide="ctrl.videoEnded">
+          <video id="example_video_1"
+          class="video-js vjs-big-play-centered vjs-default-skin"
+          controls
+          width="800"
+          height="600"
+          poster="assets/images/video-bg.png"
+          preload="auto">
+
+          <source src="https://s3-sa-east-1.amazonaws.com/multimidia-project/training-video.mp4" type='video/mp4' />
+          <source src="https://s3-sa-east-1.amazonaws.com/multimidia-project/training-video.webm" type='video/webm' />
+        </video>
+      </vjs-video-container>
+      <!-- Quiz -->
+      <md-input-container class="animate-content" ng-show="showQuiz">
+        <h1 class="md-question-text"> Questionário de aprendizado </h1>
+
+        <md-radio-group name="question.id"
+                        ng-model="data.group2"
+                        class="md-primary"
+                        ng-required="true"
+                        ng-repeat="question in ctrl.questions">
+            <p>{{ question.qst }}</p>
+            <md-radio-button ng-repeat="alt in question.alts"
+                             ng-value="alt.value">
+            {{ alt.label }}
+            </md-radio-button>
+            <br>
+        </md-radio-group>
+        <md-button md-no-ink class="md-primary md-raised" ng-click="ctrl.validateAndSend(questions)">Submeter</md-button>
+      </md-input-container>
+
+    </md-card>
+  </div>
+</div>

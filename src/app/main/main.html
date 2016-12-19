@@ -1,0 +1,30 @@
+<div layout="column" layout-fill>
+
+  <md-content>
+    <section class="jumbotron">
+      <h1>Projeto Sistemas Multimídia</h1>
+      <h2><i>Multimedia System's Project</i></h2>
+      <h2>Ferramenta EAD/<i>E-Learning Tool</i></h2>
+      <p class="lead">
+        Aluno Rogério Peixoto
+        <br>
+        Professor Rafael DiBernardo
+      </p>
+    </section>
+
+    <div class="techs" layout-align="center">
+      <md-card ng-repeat="midia in main.midiaTypes">
+        <md-card-content>
+          <img class="pull-right" height="140px" ng-src="assets/images/{{ midia.logo }}" alt="{{ midia.title }}">
+          <h3 class="md-title">{{ midia.title }}</h3>
+          <p>{{ midia.description }}</p>
+        </md-card-content>
+        <br>
+        <div class="md-action-buttons">
+          <md-button ng-href="{{ midia.url }}" ng-click="main.showToastr(midia.message)">Ir</md-button>
+        </div>
+      </md-card>
+    </div>
+  </md-content>
+
+</div>
