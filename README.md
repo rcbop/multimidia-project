@@ -1,6 +1,8 @@
 # multimidia-project
 Projeto da Disciplina de Sistemas Multimidia FBV
 
+Disponível: http://multimidia-project.s3-website-sa-east-1.amazonaws.com/
+
 Para iniciar a aplicação em modo desenvolvimento:
 
 1) Instale o gulp e o bower globalmente :
