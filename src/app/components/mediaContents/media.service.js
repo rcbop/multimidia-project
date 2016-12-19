@@ -17,14 +17,14 @@
             {
               'title': 'Livro de Sistemas Multimídia',
               'url': 'https://drive.google.com/open?id=0B3Sh8eYLj1ByZXNCaEVjZmIwaW8',
-              'description': 'Livro da discplina online no formato pdf',
+              'description': 'Livro da disciplina hospedado no google drive online no formato pdf',
               'logo': 'ms-book.png',
               'message': 'Abrindo pdf no Google drive'
             },
             {
               'title': 'Repositório GitHub',
               'url': 'https://github.com/rcbop/multimidia-project',
-              'description': 'Repositório github com o código',
+              'description': 'Repositório git no github com o código fonte da solução',
               'logo': 'github.gif',
               'message': 'Redirecionando'
             }
