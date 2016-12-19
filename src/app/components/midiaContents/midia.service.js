@@ -5,12 +5,12 @@
       .module('multimidiaProject')
       .service('midiaService', midiaService);
 
-  function midiaService($log) {
+  function midiaService() {
       var data = [
             {
               'title': 'Tutorial AWS EC2',
               'url': '/player',
-              'description': 'Uma vídeo aula sobre o serviço Elastic Container Cloud da AWS',
+              'description': 'Uma vídeo aula sobre o serviço EC2 da AWS',
               'logo': 'aws-icon.png',
               'message': 'Carregando video aula'
             },

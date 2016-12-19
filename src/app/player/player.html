@@ -29,22 +29,24 @@
         </video>
       </vjs-video-container>
       <!-- Quiz -->
-      <md-input-container class="animate-content" ng-show="showQuiz">
-        <h1 class="md-question-text"> Questionário de aprendizado </h1>
+      <md-input-container class="animate-content" ng-show="ctrl.showQuiz">
+        <form name="quizForm" data-ng-submit="ctrl.validateForm()">
+          <h1 class="md-question-text"> Questionário de aprendizado </h1>
 
-        <md-radio-group name="question.id"
-                        ng-model="data.group2"
-                        class="md-primary"
-                        ng-required="true"
-                        ng-repeat="question in ctrl.questions">
-            <p>{{ question.qst }}</p>
-            <md-radio-button ng-repeat="alt in question.alts"
-                             ng-value="alt.value">
-            {{ alt.label }}
-            </md-radio-button>
-            <br>
-        </md-radio-group>
-        <md-button md-no-ink class="md-primary md-raised" ng-click="ctrl.validateAndSend(questions)">Submeter</md-button>
+          <md-radio-group name="question.id"
+                          ng-model="ctrl.questions[$index].radioValue"
+                          class="md-primary"
+                          ng-required="true"
+                          ng-repeat="question in ctrl.questions">
+              <p>Q{{$index+1}}) {{ question.qst }}</p>
+              <md-radio-button ng-repeat="alt in question.alts"
+                               ng-value="alt.value">
+              {{ alt.label }}
+              </md-radio-button>
+              <br>
+          </md-radio-group>
+          <md-button md-no-ink ng-disabled="quizForm.$invalid || !quizForm.$dirty" ng-class="{ 'md-primary md-raised md-hue-1': (quizForm.$dirty && quizForm.$valid) }" type="submit">Submeter</md-button>
+        </form>
       </md-input-container>
 
     </md-card>
