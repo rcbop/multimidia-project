@@ -3,9 +3,9 @@
 
   angular
       .module('multimidiaProject')
-      .service('midiaService', midiaService);
+      .service('mediaService', mediaService);
 
-  function midiaService() {
+  function mediaService() {
       var data = [
             {
               'title': 'Tutorial AWS EC2',
@@ -23,9 +23,9 @@
             }
       ];
 
-      this.getMidiaTypes = getMidiaTypes;
+      this.getMediaTypes = getMediaTypes;
 
-      function getMidiaTypes(){
+      function getMediaTypes(){
         return data;
       }
   }

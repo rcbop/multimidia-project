@@ -6,17 +6,17 @@
   .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, midiaService, toastr) {
+  function MainController($timeout, mediaService, toastr) {
     var vm = this;
 
-    vm.midiaTypes = [];
+    vm.mediaTypes = [];
     vm.classAnimation = '';
     vm.showToastr = showToastr;
 
     activate();
 
     function activate() {
-      getMidiaTypes();
+      getMediaTypes();
 
       $timeout(function() {
         vm.classAnimation = 'rubberBand';
@@ -28,8 +28,8 @@
       vm.classAnimation = '';
     }
 
-    function getMidiaTypes(){
-      vm.midiaTypes = midiaService.getMidiaTypes();
+    function getMediaTypes(){
+      vm.mediaTypes = mediaService.getMediaTypes();
     }
   }
 })();

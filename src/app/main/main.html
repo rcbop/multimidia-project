@@ -13,15 +13,15 @@
     </section>
 
     <md-content class="techs" layout-align="center center" layout-xs="column" layout-gt-xs="row">
-      <md-card ng-repeat="midia in main.midiaTypes">
+      <md-card ng-repeat="media in main.mediaTypes">
         <md-card-content>
-          <img class="pull-right" height="140px" ng-src="assets/images/{{ midia.logo }}" alt="{{ midia.title }}">
-          <h3 class="md-title">{{ midia.title }}</h3>
-          <p>{{ midia.description }}</p>
+          <img class="pull-right" height="140px" ng-src="assets/images/{{ media.logo }}" alt="{{ media.title }}">
+          <h3 class="md-title">{{ media.title }}</h3>
+          <p>{{ media.description }}</p>
         </md-card-content>
         <br>
         <div class="md-action-buttons">
-          <md-button ng-href="{{ midia.url }}" ng-click="main.showToastr(midia.message)">Ir</md-button>
+          <md-button ng-href="{{ media.url }}" ng-click="main.showToastr(media.message)">Ir</md-button>
         </div>
       </md-card>
     </md-content>
